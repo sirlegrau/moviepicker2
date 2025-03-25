@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#lobby {
+    text-align: center;
+}
+
+#playersInLobby {
+    list-style-type: none;
+    padding: 0;
+}
+
+#playersInLobby li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.results-container {
+    display: flex;
+}
+
+.animation-area, .ranked-list {
+    flex: 1;
+    padding: 10px;
+}
+
+.movie-vote-animation {
+    margin-bottom: 15px;
+}
+
+.vote-bars {
+    display: flex;
+    align-items: center;
+}
+
+.yes-bar, .no-bar {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.yes-bar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.no-bar {
+    background-color: #F44336;
+    color: white;
+}
+
+#finalRankings {
+    list-style-type: decimal;
+}
+
+#finalRankings .votes {
+    color: #666;
+    margin-left: 10px;
+}
+
+.buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+}

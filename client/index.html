@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selection Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Movie Selection Game 🎬</h1>
+
+    <!-- Name Input Modal -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="playerNameInput" placeholder="Your Name">
+            <button id="submitName">Join</button>
+        </div>
+    </div>
+
+    <!-- Lobby Screen -->
+    <div id="lobby">
+        <h2>Lobby</h2>
+        <div id="playersList">
+            <h3>Players:</h3>
+            <ul id="playersInLobby"></ul>
+        </div>
+        <div class="lobby-actions">
+            <button id="joinLobby">Ready</button>
+            <button id="startGame" disabled>Start Game</button>
+        </div>
+        <p id="lobbyStatus"></p>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game" class="hidden">
+        <div class="game-header">
+            <div id="votesRemaining">Votes Remaining: 5</div>
+        </div>
+        <h2 id="movieTitle"></h2>
+        <img id="moviePoster" src="" alt="Movie Poster">
+        <p id="movieDescription"></p>
+        <div class="buttons">
+            <button id="voteYes" class="yes">👍 Yes (10 votes)</button>
+            <button id="voteNo" class="no">👎 No (10 votes)</button>
+        </div>
+        <p id="roundInfo"></p>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results" class="hidden">
+        <div class="results-container">
+            <div id="votingAnimation" class="animation-area">
+                <!-- Animation of votes will go here -->
+            </div>
+            <div id="rankedMoviesList" class="ranked-list">
+                <h2>Final Rankings</h2>
+                <ol id="finalRankings"></ol>
+            </div>
+        </div>
+        <button id="restartGame">Play Again</button>
+    </div>
+</div>
+</body>
+</html>
